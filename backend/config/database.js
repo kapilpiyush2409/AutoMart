@@ -7,7 +7,7 @@ const connectDatabase = ()=>{
         useUnifiedTopology: true,
         useCreateIndex: true
     }).then( con  => {
-        console.log('MondoDB Database connection with HOST: ${con.connection.host}')
+        console.log(`MondoDB Database connection with HOST: ${con.connection.host}`)
     })
 }
 
