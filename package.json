@@ -1,0 +1,21 @@
+{
+  "name": "automart",
+  "version": "1.0.0",
+  "description": "full ecommerce site using mren",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "SET NODE_ENV=DEVELOPMENT& nodemon backend/server",
+    "prod": "SET NODE_ ENV=PRODUCTION& nodemon backend/server",
+    "seeder":"node backend/util/seeder.js"
+  },
+  "author": "Pyush kapil",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.9",
+    "nodemon": "^2.0.7",
+    "save-dev": "*"
+  }
+}

@@ -1,0 +1,74 @@
+[
+    {
+        "name": "test",
+        "price":"45.00",
+        "description":"test description",
+        "ratings":"4.5",
+        "image":[],
+        "category": "test",
+        "seller":"test",
+        "stock":50,
+        "numOfReviews":32,
+        "reviews":[]
+    },
+    {
+        "name": "test1",
+        "price":"145.00",
+        "description":"test1 description",
+        "ratings":"4.0",
+        "image":[],
+        "category": "test1",
+        "seller":"test1",
+        "stock":50,
+        "numOfReviews":12,
+        "reviews":[]
+    },
+    {
+        "name": "test3",
+        "price":"345.00",
+        "description":"test3 description",
+        "ratings":"4.3",
+        "image":[],
+        "category": "test3",
+        "seller":"test3",
+        "stock":30,
+        "numOfReviews":2,
+        "reviews":[]
+    },
+    {
+        "name": "test4",
+        "price":"445.00",
+        "description":"test4 description",
+        "ratings":"4.0",
+        "image":[],
+        "category": "test4",
+        "seller":"test4",
+        "stock":40,
+        "numOfReviews":42,
+        "reviews":[]
+    },
+    {
+        "name": "test5",
+        "price":"55.00",
+        "description":"test5 description",
+        "ratings":"4.2",
+        "image":[],
+        "category": "test5",
+        "seller":"test5",
+        "stock":20,
+        "numOfReviews":12,
+        "reviews":[]
+    },
+    {
+        "name": "test6",
+        "price":"35.00",
+        "description":"test6 description",
+        "ratings":"5.0",
+        "image":[],
+        "category": "test6",
+        "seller":"test6",
+        "stock":15,
+        "numOfReviews":22,
+        "reviews":[]
+    }
+]
