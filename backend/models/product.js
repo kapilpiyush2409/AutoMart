@@ -26,11 +26,11 @@ const productSchema = new mongoose.Schema({
         {
             public_id: {
                 type:String,
-                
+                required: true
             },
             url: {
                 type: String,
-                
+                required: true
             },
         }
     ],
@@ -69,15 +69,15 @@ const productSchema = new mongoose.Schema({
         {
         name: {
             type: String,
-            
+            required: true
         },
         rating: {
             type: Number,
-        
+            required: true
         },
         comment: {
             type: String,
-            
+            required: true
         }
     
     }

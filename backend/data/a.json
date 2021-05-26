@@ -1,0 +1,32 @@
+{
+"shippingInfo": {
+
+    "address": "test address" ,
+    "city":"test city" ,
+    "phoneNo":"8278781292",
+    "postalCode":"177033" ,
+
+    "country":"test country"
+},
+
+    "orderItems": [
+        {
+            "name": "test",
+            "quantity": "2",
+            "image":"https://res.cloudinary.com/dxopjqiiz/image/upload/v1621940318/Utwwmd7PuuiHDbpsBxteygFS63eNI6rfK4J78xCu_haq7ol.jpg",
+            "price":"100"
+           
+        }
+    ],
+    "paymentInfo": {
+        "id": "testid",
+        "status":"Proccessing"
+    },
+
+    "itemPrice":"100" ,
+    "taxPrice": "10",
+    "shippingPrice":"10",
+    "totalPrice":"220",
+    "orderStatus":"Proccessing"
+    
+}
