@@ -4,71 +4,132 @@
         "price":"45.00",
         "description":"test description",
         "ratings":"4.5",
-        "image":[],
+        "image":[{
+            "public_id":"/Products/download_ufjguo.png",
+           "url":"https://res.cloudinary.com/dxopjqiiz/image/upload/v1622190560/AutoMart/Products/download_ufjguo.png"
+        }
+        ],
         "category": "test",
         "seller":"test",
         "stock":50,
-        "numOfReviews":32,
-        "reviews":[]
+        "numOfReviews":1,
+        "reviews":[
+            {
+                "name": "testname1",
+                "rating":"2",
+                "comment":"comment1"
+            
+            }
+        ]
     },
     {
         "name": "test1",
         "price":"145.00",
         "description":"test1 description",
         "ratings":"4.0",
-        "image":[],
+        "image":[{
+            "public_id":"/Products/download_ufjguo.png",
+           "url":"https://res.cloudinary.com/dxopjqiiz/image/upload/v1622190560/AutoMart/Products/download_ufjguo.png"
+        }],
         "category": "test1",
         "seller":"test1",
         "stock":50,
         "numOfReviews":12,
-        "reviews":[]
+        "reviews":[
+            {
+                "name": "testname2",
+                "rating":"3",
+                "comment":"comment12"
+            
+            }
+        ]
     },
     {
         "name": "test3",
         "price":"345.00",
         "description":"test3 description",
         "ratings":"4.3",
-        "image":[],
+        "image":[{
+            "public_id":"/Products/download_ufjguo.png",
+           "url":"https://res.cloudinary.com/dxopjqiiz/image/upload/v1622190560/AutoMart/Products/download_ufjguo.png"
+        }],
         "category": "test3",
         "seller":"test3",
         "stock":30,
         "numOfReviews":2,
-        "reviews":[]
+        "reviews":[
+            {
+                "name": "testname3",
+                "rating":"3",
+                "comment":"comment3"
+            
+            }
+        ]
     },
     {
         "name": "test4",
         "price":"445.00",
         "description":"test4 description",
         "ratings":"4.0",
-        "image":[],
+        "image":[{
+            "public_id":"/Products/download_ufjguo.png",
+           "url":"https://res.cloudinary.com/dxopjqiiz/image/upload/v1622190560/AutoMart/Products/download_ufjguo.png"
+        }],
         "category": "test4",
         "seller":"test4",
         "stock":40,
         "numOfReviews":42,
-        "reviews":[]
+        "reviews":[
+            {
+                "name": "testname4",
+                "rating":"4",
+                "comment":"comment4"
+            
+            }
+        ]
     },
     {
         "name": "test5",
         "price":"55.00",
         "description":"test5 description",
         "ratings":"4.2",
-        "image":[],
+        "image":[{
+            "public_id":"/Products/download_ufjguo.png",
+           "url":"https://res.cloudinary.com/dxopjqiiz/image/upload/v1622190560/AutoMart/Products/download_ufjguo.png"
+        }],
         "category": "test5",
         "seller":"test5",
         "stock":20,
         "numOfReviews":12,
-        "reviews":[]
+        "reviews":[
+            {
+                "name": "testname5",
+                "rating":"5",
+                "comment":"comment5"
+            
+            }
+        ]
     },
     {
         "name": "test6",
         "price":"35.00",
         "description":"test6 description",
         "ratings":"5.0",
-        "image":[],
+        "image":[{
+            "public_id":"/Products/download_ufjguo.png",
+           "url":"https://res.cloudinary.com/dxopjqiiz/image/upload/v1622190560/AutoMart/Products/download_ufjguo.png"
+        }],
         "category": "test6",
         "seller":"test6",
         "stock":15,
         "numOfReviews":22,
-        "reviews":[]
+        "reviews":[
+            {
+                "name": "testname6",
+                "rating":"6",
+                "comment":"comment6"
+            
+            }
+        ]
     }
 ]
