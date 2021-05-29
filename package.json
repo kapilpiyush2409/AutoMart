@@ -15,9 +15,11 @@
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "cloudinary": "^1.25.1",
     "cookie-parser": "^1.4.5",
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.9",
     "nodemailer": "^6.6.0",
@@ -25,6 +27,7 @@
     "reac": "^0.0.0",
     "react": "^17.0.2",
     "save-dev": "*",
+    "stripe": "^8.150.0",
     "validater": "^1.0.5",
     "validator": "^13.6.0"
   }

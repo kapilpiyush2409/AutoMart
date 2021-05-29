@@ -1,22 +1,21 @@
-const mongoose=require('mongoose');
+const mongoose = require('mongoose')
 
 const productSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: [true,'Please enter a product name'],
+        required: [true, 'Please enter product name'],
         trim: true,
-        maxLength: [100,'product name  cannot exceed 100 characters']
+        maxLength: [100, 'Product name cannot exceed 100 characters']
     },
     price: {
         type: Number,
-        required: [true,'Please enter product prices'],
-        maxLength: [5,'product prices cannot exceed 5 characters'],
+        required: [true, 'Please enter product price'],
+        maxLength: [5, 'Product name cannot exceed 5 characters'],
         default: 0.0
     },
     description: {
         type: String,
-        required: [true,'Please enter a product description'],
-
+        required: [true, 'Please enter product description'],
     },
     ratings: {
         type: Number,
@@ -25,7 +24,7 @@ const productSchema = new mongoose.Schema({
     images: [
         {
             public_id: {
-                type:String,
+                type: String,
                 required: true
             },
             url: {
@@ -36,9 +35,9 @@ const productSchema = new mongoose.Schema({
     ],
     category: {
         type: String,
-        required: [true,'please select category for this product'],
+        required: [true, 'Please select category for this product'],
         enum: {
-            values : [
+            values: [
                 'Low voltage',
                 'auxiliary electrical system',
                 ' electronics',
@@ -48,49 +47,53 @@ const productSchema = new mongoose.Schema({
                 'Miscellaneous auto parts',
                 'test','test1','test3','test4','test5','test6'
             ],
-            messages: 'Please select correct category for this product'
+            message: 'Please select correct category for product'
         }
     },
     seller: {
-        type:String,
-        required: [true,'Please enter product seller']
+        type: String,
+        required: [true, 'Please enter product seller']
     },
     stock: {
-        type:Number,
-        required: [true,'Please enter product stock'],
-        maxLength: [5,'please name cannot exceed 5 characters'],
+        type: Number,
+        required: [true, 'Please enter product stock'],
+        maxLength: [5, 'Product name cannot exceed 5 characters'],
         default: 0
     },
     numOfReviews: {
-        type : Number,
-        default :0
+        type: Number,
+        default: 0
     },
     reviews: [
         {
-        name: {
-            type: String,
-            required: true
-        },
-        rating: {
-            type: Number,
-            required: true
-        },
-        comment: {
-            type: String,
-            required: true
+            user: {
+                type: mongoose.Schema.ObjectId,
+                ref: 'User',
+                required: true
+            },
+            name: {
+                type: String,
+                required: true
+            },
+            rating: {
+                type: Number,
+                required: true
+            },
+            comment: {
+                type: String,
+                required: true
+            }
         }
-    
-    }
-],
-
-   /* user:{
+    ],
+    user: {
         type: mongoose.Schema.ObjectId,
         ref: 'User',
         required: true
-    },*/
+    },
     createdAt: {
         type: Date,
         default: Date.now
     }
 })
-module.exports=mongoose.model('Product',productSchema);
+
+module.exports = mongoose.model('Product', productSchema);

@@ -1,27 +1,26 @@
 const Order = require('../models/order');
-const Product = require('../models/Product');
+const Product = require('../models/product');
 
-const ErrorHandler=require('../util/ErrorHandler');
-const catchAsyncError=require('../middlewares/catchAsyncError');
+const ErrorHandler = require('../util/errorHandler');
+const catchAsyncErrors = require('../middlewares/catchAsyncError');
 
-
-//Create a new Order => /api/v1/order/new
-
-exports.newOrder = catchAsyncError(async(req, res, next) =>{
+// Create a new order   =>  /api/v1/order/new
+exports.newOrder = catchAsyncErrors(async (req, res, next) => {
     const {
         orderItems,
         shippingInfo,
-        itemPrice,
+        itemsPrice,
         taxPrice,
         shippingPrice,
         totalPrice,
         paymentInfo
+
     } = req.body;
 
-    const order = await Order.create({ 
+    const order = await Order.create({
         orderItems,
         shippingInfo,
-        itemPrice,
+        itemsPrice,
         taxPrice,
         shippingPrice,
         totalPrice,
@@ -34,25 +33,25 @@ exports.newOrder = catchAsyncError(async(req, res, next) =>{
         success: true,
         order
     })
-
 })
 
 
-//Get single order => /api/v1/order/:id
-exports.getSingleOrder = catchAsyncError(async(req, res, next) =>{
-    const order = await Order.findById(req.params.id).populate('user','name email')
+// Get single order   =>   /api/v1/order/:id
+exports.getSingleOrder = catchAsyncErrors(async (req, res, next) => {
+    const order = await Order.findById(req.params.id).populate('user', 'name email')
 
-    if(!order){
-        return next(new ErrorHandler('No Order found with this ID',404))
+    if (!order) {
+        return next(new ErrorHandler('No Order found with this ID', 404))
     }
+
     res.status(200).json({
         success: true,
         order
     })
 })
 
-//Get logged in user orders => /api/v1/order/me
-exports.myOrder = catchAsyncError(async(req, res, next) =>{
+// Get logged in user orders   =>   /api/v1/orders/me
+exports.myOrders = catchAsyncErrors(async (req, res, next) => {
     const orders = await Order.find({ user: req.user.id })
 
     res.status(200).json({
@@ -61,13 +60,14 @@ exports.myOrder = catchAsyncError(async(req, res, next) =>{
     })
 })
 
-//Get all orders-ADMIN  => /api/v1/admin/orders
-exports.allOrder = catchAsyncError(async(req, res, next) =>{
+
+// Get all orders - ADMIN  =>   /api/v1/admin/orders/
+exports.allOrders = catchAsyncErrors(async (req, res, next) => {
     const orders = await Order.find()
 
     let totalAmount = 0;
 
-    orders.forEach(order =>{ 
+    orders.forEach(order => {
         totalAmount += order.totalPrice
     })
 
@@ -78,9 +78,8 @@ exports.allOrder = catchAsyncError(async(req, res, next) =>{
     })
 })
 
-
 // Update / Process order - ADMIN  =>   /api/v1/admin/order/:id
-exports.updateOrder = catchAsyncError(async (req, res, next) => {
+exports.updateOrder = catchAsyncErrors(async (req, res, next) => {
     const order = await Order.findById(req.params.id)
 
     if (order.orderStatus === 'Delivered') {
@@ -110,7 +109,7 @@ async function updateStock(id, quantity) {
 }
 
 // Delete order   =>   /api/v1/admin/order/:id
-exports.deleteOrder = catchAsyncError(async (req, res, next) => {
+exports.deleteOrder = catchAsyncErrors(async (req, res, next) => {
     const order = await Order.findById(req.params.id)
 
     if (!order) {
